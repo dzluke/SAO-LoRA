@@ -1,0 +1,42 @@
+[project]
+name = "sao-lora"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "aeiou>=0.0.21",
+    "bitsandbytes>=0.49.2",
+    "dill>=0.4.1",
+    "einops>=0.8.2",
+    "pandas>=2.0.2",
+    "prefigure>=0.0.9",
+    "pytorch-lightning>=2.1.0",
+    "scipy>=1.15.3",
+    "Setuptools<81",
+    "stable-audio-tools",
+    "torchvision==0.22",
+    "torch==2.7.0",
+    "torchaudio==2.7.0",
+    "torchcodec>=0.11.1",
+    "wandb>=0.15.4",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cu128", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]
+torchvision = [
+  { index = "pytorch-cu128", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
+]
+stable-audio-tools = { workspace = true, editable = true }
+
+[tool.uv.workspace]
+members = [
+    "stable-audio-tools",
+]

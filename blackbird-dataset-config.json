@@ -1,0 +1,11 @@
+{
+    "dataset_type": "audio_dir",
+    "datasets": [
+        {
+            "id": "blackbird",
+            "path": "C:\\Users\\dzluk\\stable-audio-tools\\data\\blackbird\\audio",
+            "custom_metadata_module": "C:\\Users\\dzluk\\stable-audio-tools\\data\\blackbird\\custom_metadata.py"
+        }
+    ],
+    "random_crop": true
+}

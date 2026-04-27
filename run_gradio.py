@@ -22,9 +22,9 @@ if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(description='Run gradio interface')
     parser.add_argument('--pretrained-name', type=str, help='Name of pretrained model', required=False)
-    parser.add_argument('--model-config', type=str, help='Path to model config', required=False)
-    parser.add_argument('--ckpt-path', type=str, help='Path to model checkpoint', required=False)
-    parser.add_argument('--lora-dir', type=str, help='Directory containing lora checkpoints', required=False)
+    parser.add_argument('--model-config', type=str, help='Path to model config', required=True)
+    parser.add_argument('--ckpt-path', type=str, help='Path to model checkpoint', required=True)
+    parser.add_argument('--lora-dir', type=str, help='Directory containing lora checkpoints', required=True)
     parser.add_argument('--pretransform-ckpt-path', type=str, help='Optional to model pretransform checkpoint', required=False)
     parser.add_argument('--username', type=str, help='Gradio username', required=False)
     parser.add_argument('--password', type=str, help='Gradio password', required=False)
